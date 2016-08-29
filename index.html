@@ -9,16 +9,9 @@
 <body>
     <my-component></my-component>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/typescript/lib/typescript.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
-        System.config({
-            transpiler: 'typescript',
-            typescriptOptions:{
-                "emitDecoratorMetadata": true,
-            }            
-        });
-        System.import('index.ts')
+        System.import('index.js')
             .then(null, console.error.bind(console));
     </script>
 </body>
